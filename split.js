@@ -22,7 +22,7 @@ document.getElementById("dashboard").addEventListener("submit", async function(e
 
     // Send only the required fields to the backend
     try {
-        const res = await fetch('http://localhost:5001/subscriptions', {
+        const res = await fetch('https://findmysubsbackend.onrender.com/subscriptions', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

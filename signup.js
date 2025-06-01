@@ -17,7 +17,7 @@ document.getElementById("signup").addEventListener("submit", async function(e){
     }
     try{
 
-        res=await fetch("http://localhost:5001/signup", {
+        res=await fetch("https://findmysubsbackend.onrender.com/signup", {
          
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const res = await fetch('/subscriptions', { credentials: 'include' });
+        const res = await fetch('https://findmysubsbackend.onrender.com/subscriptions', { credentials: 'include' });
 
         if (!res.ok) {
             const errorText = await res.text();

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     events: async function (fetchInfo, successCallback, failureCallback) {
       try {
-        const res = await fetch('/subscriptions', {
+        const res = await fetch('https://findmysubsbackend.onrender.com/subscriptions', {
           credentials: "include"
         });
 
