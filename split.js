@@ -25,6 +25,7 @@ document.getElementById("dashboard").addEventListener("submit", async function(e
         const res = await fetch('https://findmysubsbackend.onrender.com/subscriptions', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
+            credentials: "include",
             body: JSON.stringify({
                 subscriptionname,
                 subscriptiondate,

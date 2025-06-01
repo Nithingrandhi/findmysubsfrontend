@@ -18,6 +18,7 @@
 
                 method:'POST',
                 headers:{'Content-Type': 'application/json'},
+                credentials: "include",
                 body:JSON.stringify({subscriptionname, subscriptiondate,  subscriptionbillingcycle ,subscriptioncost })
             });
             const data=await res.json();
