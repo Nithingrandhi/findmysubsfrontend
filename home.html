@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindMySubs</title>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #7c4dff, #512da8);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NavBar */
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 40px;
+      font-size: 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background: white;
+      color: #512da8;
+    }
+
+    /* Centered Content */
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .text-box {
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: white;
+      color: #512da8;
+      padding: 15px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #f3e5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar" data-aos="fade-down">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+  </div>
+
+  <!-- Center Content -->
+  <div class="content">
+    <div class="text-box" data-aos="zoom-in" data-aos-duration="1200">
+      <h1>All your subscriptions<br>organized in one place</h1>
+      <p>Never lose track of a subscription again! Our app lets you effortlessly add and manage all your services, giving you a complete picture of your commitments</p>
+      <a href="login.html">
+        <button class="cta-button" data-aos="fade-up" data-aos-delay="300">Add Your Subscriptions</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

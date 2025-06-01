@@ -1,0 +1,166 @@
+<body>
+  <h2>Add Your Subscriptions</h2>
+
+  <style>
+
+  main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  background-color: #111;
+  padding: 1rem 2rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #f8c200;
+}
+  body {
+      background-color: #0d0d0d;
+      color: #f8f8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      color: #f8c200;
+      padding: 1rem;
+    }
+    .navbar{
+      display: flex;
+      justify-content: flex-end;
+     background-color: #111;
+     padding: 1rem 2rem;
+    }
+
+    .navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 0 0 12px 12px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #f8f8f8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #f8c200;
+    }
+
+    #dashboard {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      margin: 2rem;
+      border-radius: 16px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #f8f8f8;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #f8f8f8;
+    }
+
+    button {
+      background-color: #f8c200;
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .form-container {
+  background-color: #0d0d0d;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #0d0d0d;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+    button:hover {
+      background-color: #ffdd33;
+    }
+
+  </style>
+
+  <nav class="navbar">
+    <a href="subscriptions.html">My Subscriptions</a>
+    <a href="analytics.html">View Analytics</a>
+    <a href="upcomingrenewels.html">Upcoming Renewals</a>
+    <a href="split.html">Split your subscription</a>
+    <a href="home.html">Logout</a>
+  </nav>
+
+  <main>
+    <div class="form-container">
+      <form id="dashboard">
+        <label for="nameofsubscription">Name of Subscription:</label>
+        <input type="text" id="nameofsubscription">
+
+        <label for="dateofsubscription">Date of Subscription:</label>
+        <input type="date" id="dateofsubscription">
+
+        <label for="billingcycle">Billing Cycle:</label>
+        <select name="billingcycle" id="billingcycle">
+          <option value="12MONTHS" selected>12 Months</option>
+          <option value="6MONTHS">6 Months</option>
+          <option value="1MONTHS">1 Month</option>
+        </select>
+
+        <label for="cost">Cost:</label>
+        <input type="number" min="0" id="cost">
+
+        <button type="submit">Add Subscription</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>

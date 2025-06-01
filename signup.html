@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #7c4dff, #512da8);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      color: #d1c4e9;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    form {
+      background-color: #0d0d0d;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      min-width: 320px;
+    }
+
+    form div {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: 2px solid #7c4dff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff7043;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff5722;
+    }
+
+    .switch-page {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #d1c4e9;
+    }
+
+    .switch-page a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .switch-page a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to FindMySubs</h2>
+  <p class="subtitle">Create your account</p>
+
+  <form id="signup">
+    <div>
+      <label for="signup-username">Username</label>
+      <input type="text" required id="signup-username" placeholder="Enter your username" />
+    </div>
+
+    <div>
+      <label for="signup-email">Email</label>
+      <input type="email" required id="signup-email" placeholder="Enter your email" />
+    </div>
+
+    <div>
+      <label for="signup-password">Password</label>
+      <input type="password" required id="signup-password" placeholder="Enter your password" />
+    </div>
+
+    <div>
+      <label for="signup-confirmpassword">Confirm Password</label>
+      <input type="password" required id="signup-confirmpassword" placeholder="Confirm your password" />
+    </div>
+
+    <button type="submit">Signup</button>
+  </form>
+
+  <p class="switch-page">Already have an account? <a href="login.html">Login</a></p>
+
+  <script src="signup.js"></script>
+</body>
+</html>

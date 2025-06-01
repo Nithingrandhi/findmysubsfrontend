@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #7c4dff, #512da8); /* matches screenshot gradient */
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+
+    form {
+      background-color: #0d0d0d;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #2a2a2a;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff7043;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f4511e;
+    }
+
+    a {
+      color: #fff59d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .signup-link {
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to FindMySubs</h2>
+  <p>Login to your account</p>
+
+  <form id="login">
+    <label for="login-email">Email</label>
+    <input type="email" required id="login-email" placeholder="Enter your email">
+
+    <label for="login-password">Password</label>
+    <input type="password" required id="login-password" placeholder="Enter your password">
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+  <script src="login.js"></script>
+</body>
+</html>
