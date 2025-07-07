@@ -21,15 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const events = data.map(sub => {
           const startDate = new Date(sub.subscriptiondate);
 
-          // Get months from billing cycle like "1MONTHS"
           const monthsMatch = sub.subscriptionbillingcycle.match(/\d+/);
           const monthsToAdd = monthsMatch ? parseInt(monthsMatch[0], 10) : 0;
-
-          // Use setMonth to add months (more accurate)
           const renewalDate = new Date(startDate);
           renewalDate.setMonth(renewalDate.getMonth() + monthsToAdd);
 
-          // Format as YYYY-MM-DD
           const renewalDateStr = `${renewalDate.getFullYear()}-${(renewalDate.getMonth() + 1).toString().padStart(2, '0')}-${renewalDate.getDate().toString().padStart(2, '0')}`;
 
           return {
@@ -51,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const matchedSub = subscriptionsList.find(sub => sub.subscriptionname === subscriptionName);
       if (!matchedSub) return;
 
-      // Cost handling
       let displayAmount = matchedSub.subscriptioncost;
       let isSplit = false;
       let notes = "No notes";
@@ -70,8 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('modalAmount').textContent = `₹${parseFloat(displayAmount).toFixed(2)}`;
       document.getElementById('modalDate').textContent = info.event.start.toDateString();
       document.getElementById('modalNotes').textContent = notes;
-
-      // Show modal
       document.getElementById('eventModal').style.display = 'flex';
     },
 
